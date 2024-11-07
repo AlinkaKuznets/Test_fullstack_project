@@ -2,13 +2,13 @@ import express from "express"
 import mongoose from "mongoose";
 import multer from "multer"
 
-import { registerValidator, loginValidator, postCreateValidator } from "./validations.js"
+import { registerValidator, loginValidator, postCreateValidator } from "./Backend/validations.js"
 
-import checkAuth from './utils/checkAuth.js'
+import checkAuth from './Backend/utils/checkAuth.js'
 
-import * as userController from './controllers/userController.js';
-import * as postController from './controllers/postController.js';
-import handleValidationErrors from "./utils/handleValidationErrors.js";
+import * as userController from './Backend/controllers/userController.js';
+import * as postController from './Backend/controllers/postController.js';
+import handleValidationErrors from "./Backend/utils/handleValidationErrors.js";
 
 mongoose.connect('mongodb+srv://admin:180801Ak@cluster0.wrfph.mongodb.net/blog')
     .then(() => console.log('DB ok'))
